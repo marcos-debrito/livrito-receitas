@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display", serif;
+  line-height: 140%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 80vw;
+  margin-top: 40px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 5%;
+  gap: 40px;
+}
+
+main > .containerRecipe {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+main > .nameRecipe {
+  align-self: center;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+ul,
+ol {
+  padding: 7%;
+}
+
+li {
+  font-family: "Bitter", serif;
+}
+
+main > .containerRecipe > .ingredients {
+  border-bottom: 1px solid black;
+  font-weight: 700;
+}
+
+main > .containerRecipe > .methodPreparation {
+  font-weight: 700;
+  border-bottom: 1px solid black;
+}
