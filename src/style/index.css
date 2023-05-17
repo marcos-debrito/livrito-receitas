@@ -32,6 +32,14 @@ dialog {
   border: transparent;
 }
 
+.leftToRight {
+  animation: leftToRight 1s ease;
+}
+
+.rightToLeft {
+  animation: rightToLeft 1s ease;
+}
+
 dialog > .close {
   width: 30px;
   height: 30px;
@@ -108,4 +116,24 @@ dialog > .modal__controller > button {
 
 .outer_cover > .white_line > p {
   font-size: 70px;
+}
+
+@keyframes leftToRight {
+  from {
+    transform: translateX(-150%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rightToLeft {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-150%);
+  }
 }
