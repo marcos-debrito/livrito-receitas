@@ -5,6 +5,9 @@ const menuHamburguer = () => {
     const modal = document.querySelector('#hamburguinho')
 
     button.addEventListener('click', ()=>{
+        modal.classList.add('leftToRight')
+
+
         modal.showModal()
         closeMenu()
         search()
@@ -16,7 +19,14 @@ const closeMenu = () => {
     const modal = document.querySelector('#hamburguinho')
 
     closeButton.addEventListener('click', () => {
-        return modal.close()
+        modal.classList.remove('leftToRight')
+        modal.classList.add('rightToLeft')
+
+        setTimeout( ()=> {
+            modal.classList.remove('rightToLeft')
+            return modal.close()
+        }, 900)
+        
     })
 }
 
