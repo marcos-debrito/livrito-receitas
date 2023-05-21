@@ -1,5 +1,7 @@
 import { recipes } from "./database.js";
 
+
+
 const recipe = localStorage.getItem("receita");
 console.log(recipe);
 const returnHome = () => {
@@ -9,6 +11,7 @@ const returnHome = () => {
     location.replace("../../index.html");
   });
 };
+
 
 const renderRecipe = (obj) => {
   const name = document.querySelector(".nameRecipe");
@@ -23,7 +26,11 @@ const renderRecipe = (obj) => {
     ul.insertAdjacentHTML(
       "beforeend",
       `
-            <li>${element}</li>
+            <li>
+            
+            ${element};
+            <input type="checkbox" id="scales" name="scales">
+            </li>
         `
     );
   });
@@ -33,8 +40,12 @@ const renderRecipe = (obj) => {
     ol.insertAdjacentHTML(
       "beforeend",
       `
-            <li>${element}</li>
-        `
+      <li>
+        ${element};
+        <input type="checkbox" name="scales">
+      </li>
+
+      `
     );
   });
 };
