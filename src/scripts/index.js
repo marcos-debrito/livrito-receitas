@@ -35,7 +35,7 @@ const search = () => {
   const searchButton = document.querySelector(".modal__controller > button");
 
   searchButton.addEventListener("click", () => {
-    /* console.log(input.value.toUpperCase()); */
+   
     let receita = input.value.toUpperCase();
 
     for (let i = 0; i < recipes.length; i++) {
