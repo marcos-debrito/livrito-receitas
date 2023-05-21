@@ -3,20 +3,6 @@
   padding: 0;
 }
 
-/* body > main {
-    height: 100vh;
-    width: 100vw;
-    background-image: url(../assets/background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 100%;
-    position: absolute;
-    opacity: 0.2; 
-} */
-
 body > main {
   display: flex;
   align-items: center;
@@ -30,14 +16,6 @@ dialog {
   min-height: 100vh;
   width: 82vw;
   border: transparent;
-}
-
-.leftToRight {
-  animation: leftToRight 1s ease;
-}
-
-.rightToLeft {
-  animation: rightToLeft 1s ease;
 }
 
 dialog > .close {
@@ -116,24 +94,4 @@ dialog > .modal__controller > button {
 
 .outer_cover > .white_line > p {
   font-size: 70px;
-}
-
-@keyframes leftToRight {
-  from {
-    transform: translateX(-150%);
-  }
-
-  to {
-    transform: translateX(0);
-  }
-}
-
-@keyframes rightToLeft {
-  from {
-    transform: translateX(0%);
-  }
-
-  to {
-    transform: translateX(-150%);
-  }
 }
