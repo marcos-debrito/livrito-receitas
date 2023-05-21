@@ -19,7 +19,26 @@ export const recipes = [
       "Por fim, adicione as claras em neve e o fermento",
       "Unte a forma e asse em forno a 160ºC por 40 min",
     ],
-    adicionais: [],
+    adicionais: [
+      {
+        titulo: "Cobertura de Brigadeiro",
+        ingredientes: [
+          "1 lata de leite condensado",
+          "1/2 lata de leite",
+          "1 colher de margarina",
+          "1 e 1/2 colher de chocolate em pó",
+        ]
+      },
+      {
+        titulo: "Cobertura de Chocolate",
+        ingredientes: [
+          "1 xícara de açucar",
+          "1 colher de sopa de margarina",
+          "3 colheres de sopa de leite",
+          "1/2 xícara de nescau",
+        ]
+      }
+    ],
   },
   {
     categoria: "bolo",

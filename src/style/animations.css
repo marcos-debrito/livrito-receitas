@@ -1,0 +1,53 @@
+
+.leftToRight {
+  animation: leftToRight 1s ease;
+}
+
+.rightToLeft {
+  animation: rightToLeft 1s ease;
+}
+
+dialog > .modal__controller > .notFound{
+  animation: clear 1s infinite;
+  border: 2px solid #D14E3D; 
+  border-radius: 8px; 
+}
+
+dialog > .modal__controller > .found{
+  border: 2px solid #51cf66; 
+  border-radius: 8px; 
+}
+
+@keyframes clear {
+  0% {
+    transform: translateX(0%);
+  }
+
+  50%{
+    transform: translateX(3%);
+  }
+
+  100%{
+    transform: translateX(0%);
+  }
+}
+
+@keyframes leftToRight {
+  from {
+    transform: translateX(-150%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rightToLeft {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-150%);
+  }
+}
