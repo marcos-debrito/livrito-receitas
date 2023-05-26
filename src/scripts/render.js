@@ -1,7 +1,5 @@
 import { recipes } from "./database.js";
 
-
-
 const recipe = localStorage.getItem("receita");
 const returnHome = () => {
   const button = document.querySelector("#closeButton");
@@ -10,7 +8,6 @@ const returnHome = () => {
     location.replace("../../index.html");
   });
 };
-
 
 const renderRecipe = (obj) => {
   const name = document.querySelector(".nameRecipe");
@@ -26,9 +23,8 @@ const renderRecipe = (obj) => {
       "beforeend",
       `
             <li>
-            
-            ${element};
-            <input type="checkbox" id="scales" name="scales">
+              ${element}
+              <input type="checkbox" id="scales" name="scales">
             </li>
         `
     );
@@ -40,7 +36,7 @@ const renderRecipe = (obj) => {
       "beforeend",
       `
       <li>
-        ${element};
+        ${element}
         <input type="checkbox" name="scales">
       </li>
 
@@ -50,36 +46,44 @@ const renderRecipe = (obj) => {
 };
 
 const renderAddOns = (array) => {
+  if (array.length > 0) {
+    const div = document.querySelector(".add");
+    const btn = document.createElement("button");
+    btn.innerHTML = "Adicionais";
+    div.appendChild(btn);
 
-  if (array.length > 0){
-  const div = document.querySelector('.add')
-  const btn = document.createElement('button')
-  btn.innerHTML = 'Adicionais'  
-  div.appendChild(btn)
-  
-  showAdds()
+    showAdds();
   } else {
     return;
   }
-}
+};
 
 const showAdds = () => {
-  const buttons = document.querySelectorAll('button')
-  const modal = document.querySelector('.modal')
+  const buttons = document.querySelectorAll("button");
+  const modal = document.querySelector(".modal");
   buttons.forEach((button) => {
-    button.addEventListener('click', ()=>{
-      console.log(button.innerHTML)
-      modal.showModal()
-    })
-  })
-}
+    button.addEventListener("click", () => {
+      console.log(button.innerHTML);
+      modal.showModal();
 
+      closemodal();
+    });
+  });
+};
+
+const closemodal = () => {
+  const button = document.querySelector(".close");
+  const modal = document.querySelector(".modal");
+  button.addEventListener("click", () => {
+    modal.close();
+  });
+};
 
 for (let i = 0; i < recipes.length; i++) {
   if (recipes[i].nome == recipe) {
     console.log(recipes[i].adicionais.length > 0);
     renderRecipe(recipes[i]);
-    renderAddOns(recipes[i].adicionais)
+    renderAddOns(recipes[i].adicionais);
     returnHome();
   }
 }
